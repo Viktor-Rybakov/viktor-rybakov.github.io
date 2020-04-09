@@ -1,0 +1,27 @@
+.work {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100%;
+
+
+  background-color: #c6ccd8;
+  transition: 1s;
+
+  &:focus,
+  &:hover {
+    box-shadow: 0 0 10px 4px rgba(0,0,0,0.4);
+    transform: scale(1.05);
+  }
+}
+
+.work__img {
+  margin-bottom: auto;
+}
+
+.work__description {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}

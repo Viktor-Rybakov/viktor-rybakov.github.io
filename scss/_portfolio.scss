@@ -1,0 +1,23 @@
+.portfolio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.portfolio__item {
+  display: flex;
+
+  min-width: 200px;
+  width: 30%;
+
+  margin: 0 20px 20px 0;
+}
+
+.portfolio__work {
+  display: flex;
+  margin: 0;
+}
