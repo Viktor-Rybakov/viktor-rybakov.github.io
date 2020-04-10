@@ -413,24 +413,22 @@ a {
 }
 
 .portfolio__item {
-  display: flex;
-  min-width: 200px;
-  width: 30%;
   margin: 0 20px 20px 0;
 }
 
+.portfolio__link {
+  display: block;
+}
+
 .portfolio__work {
-  display: flex;
   margin: 0;
 }
 
 .work {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
   background-color: #c6ccd8;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .work:focus, .work:hover {

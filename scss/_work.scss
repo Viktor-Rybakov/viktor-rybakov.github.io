@@ -1,13 +1,9 @@
 .work {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-
-  height: 100%;
-
 
   background-color: #c6ccd8;
-  transition: 1s;
+  transition: 0.5s;
 
   &:focus,
   &:hover {

@@ -9,15 +9,13 @@
 }
 
 .portfolio__item {
-  display: flex;
-
-  min-width: 200px;
-  width: 30%;
-
   margin: 0 20px 20px 0;
 }
 
+.portfolio__link {
+  display: block;
+}
+
 .portfolio__work {
-  display: flex;
   margin: 0;
 }
