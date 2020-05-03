@@ -40,7 +40,7 @@
 
         <div class="modal js-modal">
             <section id="modal" class="modal__section js-modal__section">
-                <header class="modal__header">
+                <header class="modal__header js-modal__header">
                     <button class="modal__close-button js-modal__close-button" type="button" aria-label="Закрыть">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L8.41421 7L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L7 8.41421L1.70711 13.7071C1.31658 14.0976 0.683417 14.0976 0.292893 13.7071C-0.0976311 13.3166 -0.0976311 12.6834 0.292893 12.2929L5.58579 7L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#1B234A" />
@@ -79,14 +79,14 @@
 
                     <fieldset class="form__fieldset form__fieldset_chronic">
                         <legend class="form__legend form__legend_chronic">Хронические заболевания</legend>
-                        <input class="form__chronic-input" type="text" name="chronic-disease-input" placeholder="Начните вводить название" autocomplete="off">
+                        <input class="form__chronic-input js-form__chronic-input" type="text" placeholder="Начните вводить название" autocomplete="off" title="введите название заболевания и нажмите Enter">
 
                         <ul class="form__chronic-list js-form__chronic-list">
                             <li class="form__chronic-item">
                                 <div class="chronic-disease">
-                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-0" value="Аллергия на анальгин" tabindex="-1">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease" value="Аллергия на анальгин" tabindex="-1">
                                     <span class="chronic-disease__text">Аллергия на анальгин</span>
-                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Аллергия на анальгин">
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Аллергия на анальгин" title="Удалить">
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
                                         </svg>
@@ -96,9 +96,9 @@
 
                             <li class="form__chronic-item">
                                 <div class="chronic-disease">
-                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-1" value="Миопия" tabindex="-1">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease" value="Миопия" tabindex="-1">
                                     <span class="chronic-disease__text">Миопия</span>
-                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Миопия">
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Миопия" title="Удалить">
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
                                         </svg>
@@ -108,9 +108,9 @@
 
                             <li class="form__chronic-item">
                                 <div class="chronic-disease">
-                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-2" value="Аллергия" tabindex="-1">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease" value="Аллергия" tabindex="-1">
                                     <span class="chronic-disease__text">Аллергия</span>
-                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Аллергия">
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Аллергия" title="Удалить">
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
                                         </svg>
@@ -120,9 +120,9 @@
 
                             <li class="form__chronic-item">
                                 <div class="chronic-disease">
-                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-3" value="Гипертония" tabindex="-1">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease" value="Гипертония" tabindex="-1">
                                     <span class="chronic-disease__text">Гипертония</span>
-                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Гипертония">
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Гипертония" title="Удалить">
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
                                         </svg>
@@ -132,9 +132,9 @@
 
                             <li class="form__chronic-item">
                                 <div class="chronic-disease">
-                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-4" value="Почечная недостаточность" tabindex="-1">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease" value="Почечная недостаточность" tabindex="-1">
                                     <span class="chronic-disease__text">Почечная недостаточность</span>
-                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Почечная недостаточность">
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Почечная недостаточность" title="Удалить">
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
                                         </svg>
@@ -144,9 +144,9 @@
 
                             <li class="form__chronic-item">
                                 <div class="chronic-disease">
-                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-5" value="Аллергия на анальгин" tabindex="-1">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease" value="Аллергия на анальгин" tabindex="-1">
                                     <span class="chronic-disease__text">Аллергия на анальгин</span>
-                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Аллергия на анальгин">
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Аллергия на анальгин" title="Удалить">
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
                                         </svg>
@@ -156,9 +156,9 @@
 
                             <li class="form__chronic-item">
                                 <div class="chronic-disease">
-                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-6" value="Миопия" tabindex="-1">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease" value="Миопия" tabindex="-1">
                                     <span class="chronic-disease__text">Миопия</span>
-                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Миопия">
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Миопия" title="Удалить">
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
                                         </svg>
@@ -168,9 +168,9 @@
 
                             <li class="form__chronic-item">
                                 <div class="chronic-disease">
-                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-7" value="Аллергия" tabindex="-1">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease" value="Аллергия" tabindex="-1">
                                     <span class="chronic-disease__text">Аллергия</span>
-                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Аллергия">
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Аллергия" title="Удалить">
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
                                         </svg>
@@ -180,9 +180,9 @@
 
                             <li class="form__chronic-item">
                                 <div class="chronic-disease">
-                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-8" value="Гипертония" tabindex="-1">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease" value="Гипертония" tabindex="-1">
                                     <span class="chronic-disease__text">Гипертония</span>
-                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Гипертония">
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Гипертония" title="Удалить">
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
                                         </svg>
@@ -192,9 +192,9 @@
 
                             <li class="form__chronic-item">
                                 <div class="chronic-disease">
-                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-9" value="Почечная недостаточность" tabindex="-1">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease" value="Почечная недостаточность" tabindex="-1">
                                     <span class="chronic-disease__text">Почечная недостаточность</span>
-                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Почечная недостаточность">
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Почечная недостаточность" title="Удалить">
                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
                                         </svg>
@@ -202,6 +202,20 @@
                                 </div>
                             </li>
                         </ul>
+
+                        <template id="template">
+                            <li class="form__chronic-item">
+                                <div class="chronic-disease">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease" value="" tabindex="-1">
+                                    <span class="chronic-disease__text"></span>
+                                    <button class="chronic-disease__button" type="button" aria-label="" title="Удалить">
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </li>
+                        </template>
                     </fieldset>
 
                     <h4 class="form__subtitle">Наследственность</h4>
