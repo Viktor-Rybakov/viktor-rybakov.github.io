@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>НаПоправку — Информация о пациентах</title>
+    <meta name="description" content="Test task for NaPopravky by Viktor Rybakov">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preload" href="fonts/montserrat-v14-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+
+<body>
+    <main class="main">
+        <div class="main__container">
+            <h1 class="main__title">Информация о пациентах</h1>
+
+            <section class="user-info main__user-info">
+                <picture class="user-info__picture">
+                    <source media="(min-width: 960px)" type="image/webp" srcset="img/webp/working_remotely_desktop.webp 1x,
+                          img/webp/working_remotely_desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/webp/working_remotely.webp 1x,
+                          img/webp/working_remotely@2x.webp 2x">
+                    <source media="(min-width: 960px)" srcset="img/working_remotely_desktop.png 1x,
+                          img/working_remotely_desktop@2x.png 2x">
+                    <img class="user-info__img" src="img/working_remotely.png" srcset="img/working_remotely@2x.png 2x" alt="Нарисованная сидящая девушка с ноутбуком на коленках">
+                </picture>
+
+                <h2 class="user-info__title">Заполните свой профиль и получите 100 баллов</h2>
+
+                <p class="user-info__description">Заполните базовую информацию о&nbsp;себе, чтобы мы&nbsp;могли подбирать для вас интересные акции и&nbsp;статьи. Информация о&nbsp;пациенте используется только для автозаполнения формы записи и&nbsp;не&nbsp;видна другим пользователям.</p>
+
+                <button class="button user-info__button js-user-info__button" type="button" aria-label="Перейти к заполнению" aria-controls="modal" aria-hidden="true">
+                    <span class="button__text">Перейти к заполнению</span>
+                    <span class="button__icon">+100</span>
+                </button>
+            </section>
+        </div>
+
+        <div class="modal js-modal">
+            <section id="modal" class="modal__section js-modal__section">
+                <header class="modal__header">
+                    <button class="modal__close-button js-modal__close-button" type="button" aria-label="Закрыть">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L8.41421 7L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L7 8.41421L1.70711 13.7071C1.31658 14.0976 0.683417 14.0976 0.292893 13.7071C-0.0976311 13.3166 -0.0976311 12.6834 0.292893 12.2929L5.58579 7L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#1B234A" />
+                        </svg>
+                    </button>
+
+                    <h2 class="modal__title">Личные данные</h2>
+                </header>
+
+                <form class="modal__form form" action="https://echo.htmlacademy.ru" method="post">
+                    <h3 class="form__title">Факторы риска</h3>
+
+                    <p class="form__description">Эта информация поможет разработать для вас индивидуальный план регулярных обследований, подбирать акции и&nbsp;полезные статьи</p>
+
+                    <fieldset class="form__fieldset form__fieldset_smoking">
+                        <legend class="form__legend form__legend_smoking">Курение</legend>
+
+                        <label class="radio form__radio">
+                            <input class="radio__input visually-hidden" type="radio" name="smoking">
+                            <span class="radio__box"></span>
+                            <span class="radio__text">Не курю</span>
+                        </label>
+
+                        <label class="radio form__radio">
+                            <input class="radio__input visually-hidden" type="radio" name="smoking">
+                            <span class="radio__box"></span>
+                            <span class="radio__text">Курю</span>
+                        </label>
+
+                        <label class="radio form__radio">
+                            <input class="radio__input visually-hidden" type="radio" name="smoking" disabled>
+                            <span class="radio__box"></span>
+                            <span class="radio__text">Бросил(а)</span>
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="form__fieldset form__fieldset_chronic">
+                        <legend class="form__legend form__legend_chronic">Хронические заболевания</legend>
+                        <input class="form__chronic-input" type="text" name="chronic-disease-input" placeholder="Начните вводить название" autocomplete="off">
+
+                        <ul class="form__chronic-list js-form__chronic-list">
+                            <li class="form__chronic-item">
+                                <div class="chronic-disease">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-0" value="Аллергия на анальгин" tabindex="-1">
+                                    <span class="chronic-disease__text">Аллергия на анальгин</span>
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Аллергия на анальгин">
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </li>
+
+                            <li class="form__chronic-item">
+                                <div class="chronic-disease">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-1" value="Миопия" tabindex="-1">
+                                    <span class="chronic-disease__text">Миопия</span>
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Миопия">
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </li>
+
+                            <li class="form__chronic-item">
+                                <div class="chronic-disease">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-2" value="Аллергия" tabindex="-1">
+                                    <span class="chronic-disease__text">Аллергия</span>
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Аллергия">
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </li>
+
+                            <li class="form__chronic-item">
+                                <div class="chronic-disease">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-3" value="Гипертония" tabindex="-1">
+                                    <span class="chronic-disease__text">Гипертония</span>
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Гипертония">
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </li>
+
+                            <li class="form__chronic-item">
+                                <div class="chronic-disease">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-4" value="Почечная недостаточность" tabindex="-1">
+                                    <span class="chronic-disease__text">Почечная недостаточность</span>
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Почечная недостаточность">
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </li>
+
+                            <li class="form__chronic-item">
+                                <div class="chronic-disease">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-5" value="Аллергия на анальгин" tabindex="-1">
+                                    <span class="chronic-disease__text">Аллергия на анальгин</span>
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Аллергия на анальгин">
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </li>
+
+                            <li class="form__chronic-item">
+                                <div class="chronic-disease">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-6" value="Миопия" tabindex="-1">
+                                    <span class="chronic-disease__text">Миопия</span>
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Миопия">
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </li>
+
+                            <li class="form__chronic-item">
+                                <div class="chronic-disease">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-7" value="Аллергия" tabindex="-1">
+                                    <span class="chronic-disease__text">Аллергия</span>
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Аллергия">
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </li>
+
+                            <li class="form__chronic-item">
+                                <div class="chronic-disease">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-8" value="Гипертония" tabindex="-1">
+                                    <span class="chronic-disease__text">Гипертония</span>
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Гипертония">
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </li>
+
+                            <li class="form__chronic-item">
+                                <div class="chronic-disease">
+                                    <input class="chronic-disease__input visually-hidden" type="text" name="chronic-disease-9" value="Почечная недостаточность" tabindex="-1">
+                                    <span class="chronic-disease__text">Почечная недостаточность</span>
+                                    <button class="chronic-disease__button" type="button" aria-label="Удалить заболевание Почечная недостаточность">
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L2.58579 4L0.292894 6.29289C-0.0976309 6.68342 -0.0976309 7.31658 0.292894 7.70711C0.683417 8.09763 1.31658 8.09763 1.70711 7.70711L4 5.41421L6.29289 7.70711C6.68342 8.09763 7.31658 8.09763 7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L5.41421 4L7.70711 1.70711C8.09763 1.31658 8.09763 0.683417 7.70711 0.292893C7.31658 -0.0976311 6.68342 -0.0976311 6.29289 0.292893L4 2.58579L1.70711 0.292893Z" fill="#40B3B7" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <h4 class="form__subtitle">Наследственность</h4>
+
+                    <p class="form__subdescription">Какие из&nbsp;этих болезней были у&nbsp;ваших ближайших родственников (родителей, братьев, сестёр, бабушек, дедушек)? Это может влиять на&nbsp;вашу предрасположенность</p>
+
+                    <div class="form__container">
+                        <fieldset class="form__fieldset form__fieldset_male">
+                            <legend class="form__legend form__legend_male">Мужчины</legend>
+
+                            <label class="check form__check">
+                                <input class="check__input visually-hidden" type="checkbox" name="genetic-male-diabetes">
+                                <span class="check__box"></span>
+                                <span class="check__text">Диабет</span>
+                            </label>
+
+                            <label class="check form__check">
+                                <input class="check__input visually-hidden" type="checkbox" name="genetic-male-hypertension">
+                                <span class="check__box"></span>
+                                <span class="check__text">Гипертония</span>
+                            </label>
+
+                            <label class="check form__check">
+                                <input class="check__input visually-hidden" type="checkbox" name="genetic-male-prostate-cancer">
+                                <span class="check__box"></span>
+                                <span class="check__text">Рак простаты</span>
+                            </label>
+
+                            <label class="check form__check">
+                                <input class="check__input visually-hidden" type="checkbox" name="genetic-male-colon-cancer" disabled>
+                                <span class="check__box"></span>
+                                <span class="check__text">Рак толстого кишечника</span>
+                            </label>
+
+                            <label class="check form__check">
+                                <input class="check__input visually-hidden" type="checkbox" name="genetic-male-skin-melanoma" disabled checked>
+                                <span class="check__box"></span>
+                                <span class="check__text">Меланома кожи</span>
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="form__fieldset form__fieldset_female">
+                            <legend class="form__legend form__legend_female">Женщины</legend>
+
+                            <label class="check form__check">
+                                <input class="check__input visually-hidden" type="checkbox" name="genetic-female-diabetes">
+                                <span class="check__box"></span>
+                                <span class="check__text">Диабет</span>
+                            </label>
+                            <label class="check form__check">
+                                <input class="check__input visually-hidden" type="checkbox" name="genetic-female-hypertension">
+                                <span class="check__box"></span>
+                                <span class="check__text">Гипертония</span>
+                            </label>
+                            <label class="check form__check">
+                                <input class="check__input visually-hidden" type="checkbox" name="genetic-female-breast-cancer">
+                                <span class="check__box"></span>
+                                <span class="check__text">Рак молочной железы</span>
+                            </label>
+                            <label class="check form__check">
+                                <input class="check__input visually-hidden" type="checkbox" name="genetic-female-cervical-cancer">
+                                <span class="check__box"></span>
+                                <span class="check__text">Рак шейки матки</span>
+                            </label>
+                            <label class="check form__check">
+                                <input class="check__input visually-hidden" type="checkbox" name="genetic-female-ovarian-cancer">
+                                <span class="check__box"></span>
+                                <span class="check__text">Рак яичников</span>
+                            </label>
+                        </fieldset>
+                    </div>
+
+                    <button class="button form__submit">Добавить</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
