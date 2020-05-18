@@ -7,8 +7,8 @@ let clickPrev = prev;
 let clickNext = next;
 let slideWidth = feedbackList.children[1].getBoundingClientRect().left - feedbackList.children[0].getBoundingClientRect().left;
 
-const FEEDBACK_NEXT = feedbackSlider.querySelector('.js-feedback-slider__button--forward');
-const FEEDBACK_PREV = feedbackSlider.querySelector('.js-feedback-slider__button--preview');
+const FEEDBACK_NEXT = feedbackSlider.querySelector('.js-feedback-slider__forward');
+const FEEDBACK_PREV = feedbackSlider.querySelector('.js-feedback-slider__preview');
 
 window.addEventListener('resize', function(){
   slideWidth = feedbackList.children[1].getBoundingClientRect().left - feedbackList.children[0].getBoundingClientRect().left;
@@ -86,11 +86,76 @@ function removeSlide() {
 }
 'use strict'
 
+const HEADER = document.querySelector('.js-header');
+const MENU = document.querySelector('.js-menu');
+const MAIN = document.querySelector('.js-main');
+const OPEN = document.querySelector('.js-menu-open');
+const CLOSE = document.querySelector('.js-menu-close');
+let headerHeight;
+
+if (window.innerWidth <= 768) {
+  addMarginMain();
+}
+
+window.addEventListener('resize', function(){
+  if (window.innerWidth <= 768) {
+    addMarginMain();
+  } else {
+    removeMarginMain();
+  }
+  closeMenu();
+});
+
+window.addEventListener('click', function(event) {
+  let target = event.target;
+
+  if ( OPEN.contains(target) ) {
+    openMenu();
+  }
+  if ( CLOSE.contains(target) ) {
+    closeMenu();
+  }
+  if ( target.closest('.menu__link') ) {
+    closeMenu();
+  } 
+  if ( target.closest('.menu__button') ) {
+    closeMenu();
+  }
+  if ( !MENU.contains(target) && !HEADER.contains(target) && MENU.classList.contains('menu--open') ) {
+    closeMenu();
+  }
+});
+
+function openMenu() {
+  headerHeight = HEADER.getBoundingClientRect().height;
+  MENU.classList.add('menu--open');
+  MENU.style.top = headerHeight + 'px';
+  OPEN.classList.add('header__button--disabled');
+  CLOSE.classList.remove('header__button--disabled');
+}
+
+function closeMenu() {
+  MENU.classList.remove('menu--open');
+  MENU.removeAttribute('style');
+  OPEN.classList.remove('header__button--disabled');
+  CLOSE.classList.add('header__button--disabled');
+}
+
+function addMarginMain() {
+  headerHeight = HEADER.getBoundingClientRect().height;
+  MAIN.style.marginTop = headerHeight + 'px';
+}
+
+function removeMarginMain() {
+  MAIN.removeAttribute('style');
+}
+'use strict'
+
 const SCREENSHOTS_SLIDER = document.querySelector('.js-screenshots-slider');
-const SCREENSHOTS_LIST = SCREENSHOTS_SLIDER.querySelectorAll('.js-screenshots-slider__list-item');
+const SCREENSHOTS_LIST = SCREENSHOTS_SLIDER.querySelectorAll('.js-screenshots-slider__item');
 const SCREENSHOTS_NUMBER = SCREENSHOTS_LIST.length;
-const SCREENSHOTS_NEXT = SCREENSHOTS_SLIDER.querySelector('.js-screenshots-slider__button--forward');
-const SCREENSHOTS_PREV = SCREENSHOTS_SLIDER.querySelector('.js-screenshots-slider__button--preview');
+const SCREENSHOTS_NEXT = SCREENSHOTS_SLIDER.querySelector('.js-screenshots-slider__forward');
+const SCREENSHOTS_PREV = SCREENSHOTS_SLIDER.querySelector('.js-screenshots-slider__preview');
 
 SCREENSHOTS_NEXT.addEventListener('click', function(){
   for (let i = 0; i < SCREENSHOTS_NUMBER; ++i) {
