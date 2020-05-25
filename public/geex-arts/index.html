@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suvi Koponen</title>
+  <meta name="description" content="Test task by Viktor Rybakov">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <link rel="preload" href="fonts/lucifer-sans-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lucifer-sans-semi-condensed-regular.woff2" as="font" crossorigin="anonymous">
+</head>
+<body>
+  <header class="header">
+    <nav class="menu header__menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="#">Shamel</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Services</a>
+        </li>
+        <li class="menu__item">
+          <button class="menu__button menu__button--burger" type="button" aria-label="Open menu">
+            <svg width="48" height="14" viewBox="0 0 48 14" fill="black" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="2"/>
+              <rect y="6" width="48" height="1"/>
+              <rect y="11" width="48" height="3"/>
+            </svg>
+          </button>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">About</a>
+        </li>
+        <li class="menu__item">
+          <button class="menu__button menu__button--star" type="button" aria-label="Star">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="#060606" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6458 25.6801L9.40324 31.4942L11.6117 22.4731L2.3793 21.4629L10.3198 16.6457L4.50577 9.4031L13.5269 11.6115L14.537 2.37916L19.3543 10.3196L26.5968 4.50563L24.3884 13.5267L33.6208 14.5369L25.6803 19.3541L31.4943 26.5967L22.4732 24.3882L21.4631 33.6206L16.6458 25.6801Z"/>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="first-section">
+    <h1 class="visually-hidden">Suvi Koponen</h1>
+
+    <div class="first-section__title first-section__title--suvi" aria-hidden="true">Suvi</div>
+    <div class="first-section__title first-section__title--kopon" aria-hidden="true">Kopon</div>
+    
+    <picture class="picture first-section__picture first-section__picture--left">
+      <source type="image/webp"
+              srcset="img/webp/photo1-800.webp 1x,
+                      img/webp/photo1-1600.webp 2x">
+      <img  class="picture__image"
+            src="img/photo1-800.jpg"
+            srcset="img/photo1-1600.jpg 2x"
+            alt="Suvi Koponen is watching to right side">
+    </picture>
+    <picture class="picture first-section__picture first-section__picture--center">
+      <source type="image/webp"
+              srcset="img/webp/photo2-800.webp 1x,
+                      img/webp/photo2-1600.webp 2x">
+      <img  class="picture__image"
+            src="img/photo2-800.jpg"
+            srcset="img/photo2-1600.jpg 2x"
+            alt="Suvi Koponen stay and loking forward">
+    </picture>
+    <picture class="picture first-section__picture first-section__picture--right">
+      <source type="image/webp"
+              srcset="img/webp/photo3-384.webp 1x,
+                      img/webp/photo3-768.webp 2x">
+      <img  class="picture__image"
+            src="img/photo3-384.jpg"
+            srcset="img/photo3-768.jpg 2x"
+            alt="Suvi Koponen with winded hair">
+    </picture>
+
+    <ul class="side-menu first-section__menu">
+      <li class="side-menu__item">
+        <a class="side-menu__link" href="#">Fashion</a>
+      </li>
+      <li class="side-menu__item">
+        <a class="side-menu__link" href="#">Design</a>
+      </li>
+      <li class="side-menu__item">
+        <a class="side-menu__link" href="#">Covers</a>
+      </li>
+    </ul>
+
+    <dl class="persons first-section__persons">
+      <dt class="persons__role">Model</dt>
+      <dd class="persons__name">Suvi Koponen</dd>
+
+      <dt class="persons__role">Photographer</dt>
+      <dd class="persons__name">Melanie + Ramon</dd>
+
+      <dt class="persons__role">Makeup artist</dt>
+      <dd class="persons__name">Jordi Fontanals</dd>
+    </dl>
+
+    <h2 class="first-section__subtitle">
+      Massimo Dutti Fall-winner<br>
+      2019 AD Campaign
+    </h2>
+
+    <article class="card first-section__card">
+      <h3 class="card__title">Helen Keller A Teller And <br>A Seller</h3>
+
+      <picture class="picture card__picture">
+        <source type="image/webp"
+                srcset="img/webp/photo4-154.webp 1x,
+                        img/webp/photo4-308.webp 2x">
+        <img  class="picture__image"
+              src="img/photo4-154.jpg"
+              srcset="img/photo4-308.jpg 2x"
+              width="154"
+              alt="Suvi Koponen with bag">
+      </picture>
+
+      <p class="card__description">The 6 Step Non Surgical Facial Rejuvenation Program</p>
+
+      <button class="card__button" type="button" aria-label="Open card"></button>
+    </article>
+  </section>
+
+  <section class="second-section js-second-section">
+    <h2 class="visually-hidden">Winter</h2>
+
+    <p class="second-section__description">
+      Starting on a&nbsp;Finnish television series 
+      <span class="second-section__description--gray">called Model School</span>
+    </p>
+
+    <picture class="picture second-section__picture">
+      <source type="image/webp"
+              srcset="img/webp/photo5-800.webp 1x,
+                      img/webp/photo5-1600.webp 2x">
+      <img  class="picture__image"
+            src="img/photo5-800.jpg"
+            srcset="img/photo5-1600.jpg 2x"
+            alt="Suvi Koponen sits">
+    </picture>
+
+    <article class="card second-section__card js-second-section__card">
+      <h3 class="card__title">www.vogue.com</h3>
+
+      <picture class="picture card__picture">
+        <source type="image/webp"
+                srcset="img/webp/photo6-146.webp 1x,
+                        img/webp/photo6-292.webp 2x">
+        <img  class="picture__image"
+              src="img/photo6-146.jpg"
+              srcset="img/photo6-292.jpg 2x"
+              width="146"
+              alt="Suvi Koponen">
+      </picture>
+
+      <p class="card__description">Ageing Skin Care Does Chemical Peeling Slow The Aging</p>
+
+      <button class="card__button card__button--small" type="button" aria-label="Open card"></button>
+    </article>
+
+    <div class="flip-card js-flip-card second-section__flip-card">
+      <article class="flip-card__description js-flip-card__description">
+        <h3 class="visually-hidden">About Suvi Koponen</h3>
+        <p class="flip-card__text">Her modeling career started in 2005&nbsp;and by 2007 she was walking&nbsp;exclusively for Prada and Miu&nbsp;Miu, <span class="flip-card__text--gray">in addition to having five&nbsp;editorials in various editions of&nbsp;Vogue Magazine.</span></p>
+        <p class="flip-card__campain flip-card__campain--left">PRADA DUTTI FALL-WINTER 2018&nbsp;AD CAMPAIGN</p>
+        <p class="flip-card__campain flip-card__campain--right">Miu Miu DUTTI FALL-summer 2017&nbsp;AD CAMPAIGN</p>
+
+        <button class="flip-card__button js-flip-card-forward" type="button" aria-label="Flip card to photo"></button>
+      </article>
+
+      <div class="flip-card__photo js-flip-card__photo flip-card__photo--disabled">
+        <picture class="picture flip-card__picture">
+          <source type="image/webp"
+                  srcset="img/webp/photo7-695.webp 1x,
+                          img/webp/photo7-1390.webp 2x">
+          <img  class="picture__image"
+                src="img/photo7-695.jpg"
+                srcset="img/photo7-1390.jpg 2x"
+                width="695"
+                alt="Suvi Koponen">
+        </picture>
+        <button class="flip-card__button flip-card__button--back js-flip-card-back" type="button" aria-label="Flip card to description"></button>
+      </div>
+    </div>
+
+    <div class="second-section__title js-winter" aria-hidden="true">Wint</div>
+  </section>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
