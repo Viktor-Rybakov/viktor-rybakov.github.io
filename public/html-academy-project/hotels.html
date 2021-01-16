@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
+</head>
+
+<body class="page-body">
+  <svg class="visually-hidden" width="0" height="0" viewBox="0 0 0 0" aria-hidden="true">
+    <symbol id="logo-htmlacademy" viewBox="0 0 114 40">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M15.52.06h-.17L0 1.72v28.77l15.35 9.35 15.35-9.35V1.72L15.52.06zm61.5 1.56h-1.93v13.11h1.93V1.63zm-36.16.01v5.14a3.98 3.98 0 012.85-1.23c.97-.06 1.92.3 2.62 1 .69.7 1.06 1.67 1.01 2.67v5.55h-1.97v-5.3c.05-.51-.1-1.03-.41-1.43a1.9 1.9 0 00-1.3-.72h-.3c-1.01.06-1.93.62-2.46 1.5v5.95h-2V1.63h1.96zm36.16 28.85h-1.74v-1.42a4.06 4.06 0 01-3.37 1.66 4.7 4.7 0 01-4.33-4.74 4.7 4.7 0 014.33-4.73c1.21-.04 2.37.47 3.17 1.4v-5.33h1.94v13.16zm-29.95-1.42c.2 0 .39-.04.58-.1v1.43c-.4.15-.82.23-1.25.22a1.76 1.76 0 01-1.76-1.08 5.04 5.04 0 01-3.31 1.17c-1.6 0-3.07-.9-3.07-2.75 0-2.3 2.1-3.01 3.91-3.01.77.01 1.54.1 2.29.27v-.33c0-1.07-.8-1.9-2.31-1.9-1.1 0-2.17.23-3.17.68v-1.83c1.09-.38 2.22-.58 3.37-.6 2.49 0 4.02 1.22 4.02 3.95v3.23a.6.6 0 00.13.43c.1.12.23.2.39.2h.18v.02zm-6.8-1.22c.03.39.2.75.5 1 .28.26.66.38 1.04.35h.12c.95 0 1.87-.39 2.54-1.08v-1.53c-.63-.14-1.27-.21-1.91-.23-1.05 0-2.28.36-2.28 1.49zm15.75-5.9a5.18 5.18 0 00-2.7-.7h-.38c-1.2.05-2.35.58-3.18 1.48-.83.9-1.27 2.1-1.23 3.34v.44a4.48 4.48 0 004.72 4.23c1 .03 2-.18 2.91-.61v-1.85c-.78.45-1.67.69-2.56.7a2.88 2.88 0 01-2.66-1.43 3.02 3.02 0 010-3.07 2.88 2.88 0 012.66-1.43c.86 0 1.7.26 2.42.75v-1.85zm10.13 7.12c.2 0 .4-.04.58-.1v1.43c-.4.15-.82.23-1.24.22a1.76 1.76 0 01-1.77-1.08 5.04 5.04 0 01-3.3 1.17c-1.6 0-3.08-.9-3.08-2.75 0-2.3 2.11-3.01 3.92-3.01.77.01 1.53.1 2.29.27v-.33c0-1.07-.8-1.9-2.32-1.9-1.09 0-2.16.23-3.16.68v-1.83c1.08-.38 2.22-.58 3.37-.6 2.49 0 4.02 1.22 4.02 3.95v3.23a.6.6 0 00.12.43c.1.12.24.2.4.2h.17v.02zm-6.3-.21c-.29-.26-.47-.62-.5-1.01h.03c0-1.13 1.16-1.49 2.28-1.49.64.02 1.28.1 1.9.23v1.53a3.54 3.54 0 01-2.54 1.08h-.11a1.4 1.4 0 01-1.05-.34zm9.48-2.92c0-1.64 1.3-2.98 2.9-2.98l.03.06c1.21 0 2.31.73 2.8 1.86v2.16a3.02 3.02 0 01-2.82 1.88 2.95 2.95 0 01-2.91-2.98zm14.02-4.68c3.5 0 4.7 2.89 4.13 5.49h-6.56c.22 1.62 1.76 2.28 3.37 2.28.96 0 1.91-.22 2.78-.64v1.73c-1 .43-2.08.64-3.16.61-2.67 0-5.01-1.53-5.01-4.77a4.57 4.57 0 011.14-3.27c.8-.89 1.9-1.41 3.08-1.46h.23v.03zm-2.48 3.93a2.42 2.42 0 012.57-2.27h.05c.62-.06 1.23.17 1.67.62.44.45.67 1.08.62 1.71h-4.91v-.06zm8.62 5.28V21.5h1.74v1.07a3.98 3.98 0 012.93-1.37 3 3 0 012.79 1.52 4.3 4.3 0 013.07-1.44 3.2 3.2 0 012.49 1.01c.64.69.97 1.63.88 2.58v5.61h-2v-5.55c.05-.46-.08-.91-.37-1.27a1.67 1.67 0 00-1.13-.62h-.27c-.87.05-1.67.5-2.19 1.2v6.24h-2v-5.55c.04-.46-.1-.92-.38-1.27-.29-.35-.7-.57-1.15-.61h-.21c-.94.08-1.8.6-2.33 1.4v6.07h-1.83l-.04-.06zm24.49-8.99h-2l-2.66 6.8-3.01-6.78h-2.11l4.22 9.06-.18.45c-.52 1.36-1.24 2.05-2.19 2.05-.3 0-.6-.04-.9-.13v1.7c.39.1.78.14 1.17.15 1.33 0 2.58-.75 3.53-3.09l4.13-10.2zM52.68 5.8V2.55l-1.95.46v2.72h-1.59V7.5h1.65V12c-.07.83.23 1.64.82 2.21.59.58 1.4.85 2.2.75.79 0 1.58-.12 2.33-.38v-1.73c-.57.24-1.17.36-1.78.36-1.14 0-1.67-.39-1.67-1.58v-4.1h3.16V5.78H52.7zm5.7 8.96v-9h1.76v1.08a3.98 3.98 0 012.92-1.38A3 3 0 0165.8 6.9a4.3 4.3 0 013.07-1.44 3.2 3.2 0 012.5 1.05c.63.7.94 1.66.84 2.62v5.62h-2V9.2c.04-.46-.1-.91-.37-1.27a1.67 1.67 0 00-1.14-.62h-.24c-.86.05-1.66.5-2.18 1.2v6.24h-2V9.2c.04-.46-.1-.91-.37-1.27a1.67 1.67 0 00-1.13-.62h-.25c-.94.08-1.8.6-2.33 1.39v6.07H58.4zM28.7 29.3v.02-.02zm0-11.98V29.3l-13.35 8.13L2 29.32v-11.8L15.3 25.6v1.42l-9.1-5.5v1.41l9.15 5.62v1.5L6.19 24.5v1.45l9.16 5.62 9.23-5.65v-6.1l4.12-2.5zm0-1.54l-3.66 2.16-1.7 1.07-8.03-4.93v1.42l6.85 4.23-.15.1-1.06.58-5.66-3.46v1.45l4.47 2.72-1.05.72-3.38-2.05v1.41l2.22 1.34-2.25 1.36L2.1 15.86l13.2-8.13 13.4 8.05zM15.3 6.28l13.42 8.07V3.56L15.36 2.13 2.02 3.56v10.8l13.27-8.09z" />
+    </symbol>
+
+    <symbol id="twitter" viewBox="0 0 17 16">
+      <path d="M10.95 1.14a3.1 3.1 0 013.58 1.18c.67-.23 1.33-.48 2-.7a2.34 2.34 0 01-.85 1.76c.69.17 1.3-.49 1.3-.49-.16 1-1 1.79-1.56 2.03C15.2 11.67 12.25 16.13 5.34 16H4.9c-.41 0-4.17-.46-4.9-1.89 2.27.2 3.9-.42 4.7-1.18-.97-.3-2.69-.47-2.99-2.95.35.11.57.23 1.2.12C1.7 9.25.36 8.53.44 6.33a1.9 1.9 0 001.34.47c-.7-.24-1.97-3.36-.9-4.95 1.82 1.85 3.74 3.6 7.16 3.77.2-2.29 1.13-3.83 2.9-4.48z" />
+    </symbol>
+
+    <symbol id="facebook" viewBox="0 0 12 22">
+      <path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" />
+    </symbol>
+
+    <symbol id="youtube" viewBox="0 0 20 16">
+      <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M3 0h14a3 3 0 013 3v10a3 3 0 01-3 3H3a3 3 0 01-3-3V3a3 3 0 013-3zm3.03 4v8L15 8 6.03 4z" />
+    </symbol>
+
+    <symbol id="order-link-increase" viewBox="0 0 11 10">
+      <path d="M5.5 0L0 10h11L5.5 0z" />
+    </symbol>
+
+    <symbol id="order-link-decrease" viewBox="0 0 11 10">
+      <path d="M5.5 10L0 0h11" />
+    </symbol>
+  </svg>
+
+  <div class="fix-container">
+    <header class="header">
+      <nav class="header__navigation navigation">
+        <a class="navigation__logo-link" href="index.html" aria-label="На гланую страницу">
+          <img class="navigation__logo-img" src="img/logo.svg" width="138" height="70"
+               alt="Логотип города Седона: мост над горами на фоне облаков">
+        </a>
+
+        <ul class="navigation__menu menu">
+          <li class="menu__item">
+            <a class="menu__link link" href="blank.html">Информация</a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link link" href="blank.html">Фото и видео</a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link link" href="blank.html">Карта штата</a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link menu__link--current link">Гостиницы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="search-section">
+        <h1 class="visually-hidden">Поиск гостиницы</h1>
+
+        <form class="search-section__form search-form" method="GET" action="https://echo.htmlacademy.ru/">
+          <fieldset class="search-form__fieldset">
+            <legend class="search-form__legend">Инфраструктура:</legend>
+
+            <input class="seach-form__checkbox visually-hidden" type="checkbox" id="swimming-pool" name="swimming-pool" checked>
+            <label class="search-form__label" for="swimming-pool">Бассейн</label>
+
+            <input class="seach-form__checkbox visually-hidden" type="checkbox" id="parking" name="parking">
+            <label class="search-form__label" for="parking">Парковка</label>
+
+            <input class="seach-form__checkbox visually-hidden" type="checkbox" id="wi-fi" name="wi-fi" disabled>
+            <label class="search-form__label" for="wi-fi">Wi-Fi</label>
+          </fieldset>
+
+          <fieldset class="search-form__fieldset">
+            <legend class="search-form__legend">Тип жилья:</legend>
+
+            <input class="seach-form__checkbox visually-hidden" type="checkbox" id="hotel" name="hotel" checked>
+            <label class="search-form__label" for="hotel">Гостиница</label>
+
+            <input class="seach-form__checkbox visually-hidden" type="checkbox" id="motel" name="motel" checked>
+            <label class="search-form__label" for="motel">Мотель</label>
+
+            <input class="seach-form__checkbox visually-hidden" type="checkbox" id="apartments" name="apartments" checked disabled>
+            <label class="search-form__label" for="apartments">Апартаменты</label>
+          </fieldset>
+
+          <div class="search-form__range-wrapper">
+            <fieldset class="search-form__fieldset search-form__fieldset--range">
+              <legend class="search-form__legend">Стоимость в сутки (Р):</legend>
+
+              <div class="search-form__range range">
+                <div class="range__inputs-container">
+                  <label class="range__label">
+                    От
+                    <input class="range__input" type="text" name="cost-from" placeholder="0" pattern="^\d+$" inputmode="numeric">
+                  </label>
+
+                  <label class="range__label">
+                    До
+                    <input class="range__input" type="text" name="cost-to" placeholder="3000" pattern="^\d+$" inputmode="numeric">
+                  </label>
+                </div>
+
+                <div class="range__scale">
+                  <div class="range__bar" style="margin-left: 0%; width: 86%;">
+                    <div class="range__toggle range__toggle--min" tabindex="0" aria-label="Изменить нижнюю границу цены"></div>
+                    <div class="range__toggle range__toggle--max" tabindex="0" aria-label="Изменить верхнюю границу цены"></div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <button class="search-form__button" type="submit">Показать</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="results-section">
+        <header class="results-section__header">
+          <h2 class="visually-hidden">Результаты поиска</h2>
+
+          <p class="results-section__header-title">Найдено: 3</p>
+
+          <div class="results-section__results-controls results-controls">
+            <p class="results-controls__label">Сортировка:</p>
+
+            <ul class="results-controls__list">
+              <li class="results-controls__list-item">
+                <a class="results-controls__sort-link results-controls__sort-link--current">По цене</a>
+              </li>
+
+              <li class="results-controls__list-item">
+                <a class="results-controls__sort-link" href="?sort=type">По типу</a>
+              </li>
+
+              <li class="results-controls__list-item">
+                <a class="results-controls__sort-link" href="?sort=rating">По рейтингу</a>
+              </li>
+            </ul>
+
+            <div class="results-controls__order-links-wrapper">
+              <a class="results-controls__order-link" href="?order=decrease" aria-label="Сортировка по убыванию">
+                <svg class="results-controls__order-link-icon" width="11" height="10" aria-hidden="true">
+                  <use class="results-controls__order-link-icon-symbol" href="#order-link-increase"></use>
+                </svg>
+              </a>
+
+              <a class="results-controls__order-link results-controls__order-link--current" aria-label="Сортировка по возрастанию">
+                <svg class="results-controls__order-link-icon" width="11" height="10" aria-hidden="true">
+                  <use class="results-controls__order-link-icon-symbol" href="#order-link-decrease"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </header>
+
+        <ul class="results-section__list">
+          <li class="results-section__list-item">
+            <article class="hotel">
+              <div class="hotel__info-container">
+                <a class="hotel__title-link link" href="blank.html">
+                  <h3 class="hotel__title">Amara Resort &amp; Spa</h3>
+                </a>
+
+                <p class="hotel__type">Гостиница</p>
+
+                <p class="hotel__price">
+                  <span class="visually-hidden">Цена</span>
+                  От 4000 Р.
+                </p>
+
+                <a class="hotel__about button button--blue" href="blank.html">Подробнее</a>
+
+                <a class="hotel__booking button button--brown" href="blank.html">Забронировать</a>
+              </div>
+
+              <picture class="hotel__picture">
+                <source type="image/webp" srcset="img/hotel-1.webp 1x,
+                              img/hotel-1@2x.webp 2x">
+                <img class="hotel__image" src="img/hotel-1.jpg" srcset="img/hotel-1@2x.jpg 2x"
+                     alt="Зеленая площадка около отеля на фоне гор" width="135" height="90">
+              </picture>
+
+              <div class="hotel__rating-container">
+                <img class="hotel__stars" src="img/4-stars.svg" alt="4 звезды" width="91" height="17">
+
+                <p class="hotel__rating">Рейтинг: 8,5</p>
+              </div>
+            </article>
+          </li>
+
+          <li class="results-section__list-item">
+            <article class="hotel">
+              <div class="hotel__info-container">
+                <a class="hotel__title-link link" href="blank.html">
+                  <h3 class="hotel__title">Desert Quail Inn</h3>
+                </a>
+
+                <p class="hotel__type">Мотель</p>
+
+                <p class="hotel__price">
+                  <span class="visually-hidden">Цена</span>
+                  От 3000 Р.
+                </p>
+
+                <a class="hotel__about-button button button--blue" href="blank.html">Подробнее</a>
+
+                <a class="hotel__booking button button--brown" href="blank.html">Забронировать</a>
+              </div>
+
+              <picture class="hotel__picture">
+                <source type="image/webp" srcset="img/hotel-2.webp 1x,
+                              img/hotel-2@2x.webp 2x">
+                <img class="hotel__image" src="img/hotel-2.jpg" srcset="img/hotel-2@2x.jpg 2x"
+                     alt="Отель в ковбойском стиле" width="135" height="90">
+              </picture>
+
+              <div class="hotel__rating-container">
+                <img class="hotel__stars" src="img/3-stars.svg" alt="3 звезды" width="66" height="17">
+
+                <p class="hotel__rating">Рейтинг: 8,9</p>
+              </div>
+            </article>
+          </li>
+
+          <li class="results-section__list-item">
+            <article class="hotel">
+              <div class="hotel__info-container">
+                <a class="hotel__title-link link" href="blank.html">
+                  <h3 class="hotel__title">Villas at Poco Diablo</h3>
+                </a>
+
+                <p class="hotel__type">Апартаменты</p>
+
+                <p class="hotel__price">
+                  <span class="visually-hidden">Цена</span>
+                  От 2000 Р.
+                </p>
+
+                <a class="hotel__about-button button button--blue" href="blank.html">Подробнее</a>
+
+                <a class="hotel__booking button button--brown" href="blank.html">Забронировать</a>
+              </div>
+
+              <picture class="hotel__picture">
+                <source type="image/webp" srcset="img/hotel-3.webp 1x,
+                              img/hotel-3@2x.webp 2x">
+                <img class="hotel__image" src="img/hotel-3.jpg" srcset="img/hotel-3@2x.jpg 2x"
+                     alt="Зеленая площадка около отеля" width="135" height="90">
+              </picture>
+
+              <div class="hotel__rating-container">
+                <img class="hotel__stars" src="img/2-stars.svg" alt="3 звезды" width="42" height="17">
+
+                <p class="hotel__rating">Рейтинг: 9,2</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <section class="footer__address-section">
+        <h2 class="visually-hidden">Контакты</h2>
+
+        <address class="footer__address">
+          <p class="footer__tag">#visitSEDONA</p>
+
+          <a class="footer__link link" href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
+        </address>
+      </section>
+
+      <section class="footer__section">
+        <h2 class="visually-hidden">Социальные сети</h2>
+
+        <ul class="footer__socials socials">
+          <li class="socials__item">
+            <a class="socials__link" href="https://twitter.com/" target="_blank" aria-label="Twitter"
+               rel="noopener noreferrer nofollow">
+              <svg class="socials__icon" width="17" height="16" aria-hidden="true">
+                <use class="socials__icon-symbol" href="#twitter"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="socials__item">
+            <a class="socials__link" href="https://facebook.com/" target="_blank" aria-label="Facebook"
+               rel="noopener noreferrer nofollow">
+              <svg class="socials__icon" width="12" height="22" aria-hidden="true">
+                <use class="socials__icon-symbol" href="#facebook"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="socials__item">
+            <a class="socials__link" href="https://www.youtube.com/" target="_blank" aria-label="Youtube"
+               rel="noopener noreferrer nofollow">
+              <svg class="socials__icon" width="20" height="16" aria-hidden="true">
+                <use class="socials__icon-symbol" href="#youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <p class="footer__logo">
+        <span class="footer__logo-text">Website by</span>
+
+        <a class="footer__logo-link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"
+           aria-label="HTML Academy" rel="noopener noreferrer nofollow">
+          <svg class="footer__logo-icon" width="114" height="40" aria-hidden="true">
+            <use class="footer__logo-icon-symbol" href="#logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </p>
+    </footer>
+  </div>
+</body>
+
+</html>
